@@ -77,4 +77,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // Dropbox
+    implementation("com.dropbox.core:dropbox-core-sdk:5.4.6")
+
 }

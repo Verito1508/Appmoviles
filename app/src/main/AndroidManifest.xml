@@ -10,19 +10,16 @@
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/nombre_app"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TaskOrganizer"
-        tools:targetApi="31"
-        >
+        tools:targetApi="31">
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -40,28 +37,26 @@
             android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.TaskOrganizer">
         </activity>
-
-        <activity android:name="com.example.planifica.backup.GoogleDriveBackupActivity" />
-        <activity android:name=".backup.GoogleDriveRestoreActivity" />
-
-        <activity
-            android:name="com.dropbox.core.android.AuthActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:scheme="db-42m3huq87ht4cyp" />
-            </intent-filter>
-        </activity>
-
-
-
-
+        
         <!-- Clave API para Google Maps -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="YOUR_API_KEY" />
+
+
+        <activity
+            android:name="com.dropbox.core.android.AuthActivity"
+            android:launchMode="singleTask"
+            android:exported="true">
+            <intent-filter>
+                <data android:scheme="db-y3xur6y63adxn2j" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+
 
     </application>
 

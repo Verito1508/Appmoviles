@@ -20,17 +20,20 @@ object DropboxUtil {
     
     private const val TAG = "DropboxUtil"
     private const val BACKUP_FILE_PATH = "/eventos_respaldo.json"
-    private const val APP_KEY = "Colocar_Aqui_Nuestro_APP_KEY"
+    private const val APP_KEY = "y3xur6y63adxn2j"
     
     private var dropboxClient: DbxClientV2? = null
     private var esRespaldo = false
-    
+    var seSolicitoAutenticacion = false
+
+
     /**
      * Inicia el proceso de respaldo en Dropbox.
      * @param activity La actividad desde la que se inicia el proceso.
      * @return true si el proceso de autenticación comenzó correctamente.
      */
     fun iniciarRespaldo(activity: Activity): Boolean {
+        seSolicitoAutenticacion = true
         esRespaldo = true
         return iniciarSesionDropbox(activity)
     }
@@ -41,6 +44,7 @@ object DropboxUtil {
      * @return true si el proceso de autenticación comenzó correctamente.
      */
     fun iniciarRestauracion(activity: Activity): Boolean {
+        seSolicitoAutenticacion = true
         esRespaldo = false
         return iniciarSesionDropbox(activity)
     }
@@ -61,6 +65,8 @@ object DropboxUtil {
      */
     fun continuarDespuesDeAutenticacion(activity: Activity) {
         val accessToken = Auth.getOAuth2Token()
+        Log.d(TAG, "AccessToken: $accessToken")
+
         if (accessToken == null) {
             mostrarError(activity, "Error en la autenticación con Dropbox")
             return
@@ -93,6 +99,10 @@ object DropboxUtil {
                 }
                 
                 // Subir a Dropbox
+                if (dropboxClient == null) {
+                    mostrarError(context, "Cliente de Dropbox no inicializado")
+                    return@Thread
+                }
                 FileInputStream(archivoRespaldo).use { inputStream ->
                     dropboxClient?.files()?.uploadBuilder(BACKUP_FILE_PATH)
                         ?.withMode(WriteMode.OVERWRITE)
