@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/tvTituloConsultaElementoEvento"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="Long Event Description that might take up multiple lines to show how it wraps"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+            <TextView
+                android:id="@+id/tvEstadoConsultaElementoEvento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Postponed"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/insignia_estado_pospuesta"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp">            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_categoria"
+                app:tint="?attr/colorControlNormal"
+                android:layout_marginEnd="4dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/tvCategoriaConsultaElementoEvento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Cita"
+                android:textAppearance="?attr/textAppearanceBody2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_rango_fecha"
+                app:tint="?attr/colorControlNormal"
+                android:layout_marginEnd="4dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/tvFechaHoraConsultaElementoEvento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="15/05/2024 - 02:30 PM"
+                android:textAppearance="?attr/textAppearanceBody2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutContactoConsultaElementoEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            tools:visibility="visible">            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_contactos"
+                app:tint="?attr/colorControlNormal"
+                android:layout_marginEnd="4dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/tvContactoConsultaElementoEvento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Juan Perez"
+                android:textAppearance="?attr/textAppearanceBody2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutUbicacionConsultaElementoEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            tools:visibility="visible">            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_localizacion"
+                app:tint="?attr/colorControlNormal"
+                android:layout_marginEnd="4dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/tvUbicacionConsultaElementoEvento"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="Some very long address that should be ellipsized at the end if it does not fit."
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+            <ImageButton
+                android:id="@+id/btnVerUbicacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_localizacion"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/ver_ubicacion"
+                app:tint="?attr/colorPrimary"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:gravity="end">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEditarEstado"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/estado"
+                app:icon="@drawable/ic_editar_estatus"
+                android:layout_marginEnd="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEliminarEvento"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/eliminar"
+                app:icon="@drawable/ic_borrar"
+                app:iconTint="@color/status_postponed"
+                android:textColor="@color/status_postponed"/>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

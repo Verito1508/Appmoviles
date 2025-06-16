@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegacion_movil"
+    app:startDestination="@+id/nav_fragmento_inicio">
+
+    <fragment
+        android:id="@+id/nav_fragmento_inicio"
+        android:name="com.example.taskorganizer.ui.inicio.InicioFragment"
+        android:label="@string/titulo_inicio"
+        tools:layout="@layout/fragmet_inicio" />
+
+    <fragment
+        android:id="@+id/nav_fragmento_agregar_evento"
+        android:name="com.example.taskorganizer.ui.agregarevent.AgregarEventoFragment"
+        android:label="@string/titulo_agregar_evento"
+        tools:layout="@layout/fragment_agregar_evento" />
+
+    <fragment
+        android:id="@+id/nav_fragmento_consultar_eventos"
+        android:name="com.example.taskorganizer.ui.consultareventos.ConsultarEventosFragment"
+        android:label="@string/titulo_consultar_eventos"
+        tools:layout="@layout/fragment_consultar_evento" />
+
+    <fragment
+        android:id="@+id/nav_fragmento_acerca_de"
+        android:name="com.example.taskorganizer.ui.acercade.AcercaDeFragment"
+        android:label="@string/nav_acerca_de"
+        tools:layout="@layout/fragment_sobre" />
+
+    <action android:id="@+id/accion_global_fragmento_respaldo" />
+    <action android:id="@+id/accion_global_fragmento_restaurar" />
+
+</navigation>
