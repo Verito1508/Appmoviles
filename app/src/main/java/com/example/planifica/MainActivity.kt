@@ -29,11 +29,7 @@ import com.example.planifica.fragments.InicioFragment
 import com.example.planifica.utils.RespaldoUtil
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
-import android.content.Intent
-import com.example.planifica.backup.GoogleDriveBackupActivity
-import kotlin.jvm.java
-import com.example.planifica.backup.GoogleDriveRestoreActivity
-
+import com.example.planifica.utils.DropboxUtil
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     
@@ -162,26 +158,30 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             .setNegativeButton(getString(R.string.cancelar), null)
             .show()
     }
-    
+
     private fun respaldoEnDropbox() {
-
-
+        val iniciado = DropboxUtil.iniciarRespaldo(this)
+        if (!iniciado) {
+            Toast.makeText(this, "No se pudo iniciar el respaldo en Dropbox", Toast.LENGTH_SHORT).show()
+        }
     }
     
     private fun respaldoEnGoogleDrive() {
-        val intent = Intent(this, GoogleDriveBackupActivity::class.java)
-        startActivity(intent)
-        Toast.makeText(this, "Función de restauración desde Gogle aceptada", Toast.LENGTH_SHORT).show()
+        // Implementación del respaldo en Google Drive
+        // Esto requerirá la integración con la API de Google Drive
+        Toast.makeText(this, "Función de respaldo en Google Drive no implementada", Toast.LENGTH_SHORT).show()
     }
-    
+
     private fun restaurarDeDropbox() {
-
-
+        val iniciado = DropboxUtil.iniciarRestauracion(this)
+        if (!iniciado) {
+            Toast.makeText(this, "No se pudo iniciar la restauración desde Dropbox", Toast.LENGTH_SHORT).show()
+        }
     }
     
     private fun restaurarDeGoogleDrive() {
-        val intent = Intent(this, GoogleDriveRestoreActivity::class.java)
-        startActivity(intent)
+        // Implementación de la restauración desde Google Drive
+        Toast.makeText(this, "Función de restauración desde Google Drive no implementada", Toast.LENGTH_SHORT).show()
     }
     
     private fun mostrarDialogoConfirmarSalir() {
@@ -232,7 +232,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
         }
     }
-    
+
+    override fun onResume() {
+        super.onResume()
+        if (DropboxUtil.seSolicitoAutenticacion) {
+            DropboxUtil.seSolicitoAutenticacion = false
+            DropboxUtil.continuarDespuesDeAutenticacion(this)
+        }
+    }
+
+
+
     override fun onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START)
