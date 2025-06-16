@@ -1,0 +1,150 @@
+<resources>
+    <string name="nombre_app">Task Organizer</string>
+
+    <string name="nav_agregar_evento">Add Event</string>
+    <string name="nav_consultar_modificar_eventos">Consult &amp; Modify Events</string>
+    <string name="nav_respaldo">Perform Backup</string>
+    <string name="nav_restaurar">Restore Data</string>
+    <string name="nav_acerca_de">About…</string>
+    <string name="nav_salir">Exit</string>
+
+    <string name="bottom_nav_inicio">Home</string>
+    <string name="bottom_nav_consultar">Consult</string>
+
+    <string name="titulo_agregar_evento">Create Event</string>
+    <string name="categoria">Category:</string>
+    <string name="categoria_cita">Appointment</string>
+    <string name="categoria_junta">Meeting</string>
+    <string name="categoria_entrega_proyecto">Project Delivery</string>
+    <string name="categoria_examen">Exam</string>
+    <string name="categoria_otro">Other</string>
+    <string name="fecha">Date:</string>
+    <string name="pista_fecha">mm/dd/yyyy</string>
+    <string name="hora">Time:</string>
+    <string name="pista_hora">--:--</string>
+    <string name="descripcion">Description:</string>
+    <string name="estado">Status:</string>
+    <string-array name="opciones_estado_evento">
+        <item>Pending</item>
+        <item>Done</item>
+        <item>Postponed</item>
+    </string-array>
+    <string name="estado_pendiente">Pending</string>
+    <string name="estado_realizado">Done</string>
+    <string name="estado_aplazado">Postponed</string>
+    <string name="ubicacion">Location:</string>
+    <string name="pista_seleccionar_ubicacion">Select location on map</string>
+    <string name="contacto">Contact:</string>
+    <string name="pista_seleccionar_contacto">Select from contacts</string>
+    <string name="recordatorio">Reminder:</string>
+    <string-array name="opciones_recordatorio">
+        <item>No reminder</item>
+        <item>At event time</item>
+        <item>10 minutes before</item>
+        <item>1 day before</item>
+    </string-array>
+    <string name="guardar">Save</string>
+    <string name="evento_guardado_exitosamente">Event saved successfully.</string>
+    <string name="error_guardando_evento">Error saving event.</string>
+    <string name="completar_campos_requeridos">Please fill in the required fields.</string>
+
+    <string name="titulo_consultar_eventos">Queries</string>
+    <string name="consultar_por">Query:</string>
+    <string name="consultar_por_rango">By range</string>
+    <string name="consultar_por_ano">By year</string>
+    <string name="consultar_por_dia">By day</string>
+    <string name="consultar_por_mes">By month</string>
+    <string name="fecha_inicial">Start Date:</string>
+    <string name="fecha_final">End Date:</string>
+    <string name="ano">Year:</string>
+    <string name="mes">Month:</string>
+    <string name="consultar">Consult</string>
+    <string name="pista_busqueda">Search event...</string>
+    <string name="sin_eventos_encontrados">No events found.</string>
+    <string name="detalles_evento_encabezado_fecha">Date</string>
+    <string name="detalles_evento_encabezado_hora">Time</string>
+    <string name="detalles_evento_encabezado_categoria">Category</string>
+    <string name="detalles_evento_encabezado_estado">Status</string>
+    <string name="detalles_evento_encabezado_descripcion">Description</string>
+    <string name="detalles_evento_encabezado_contacto">Contact</string>
+    <string name="ver_ubicacion">View Location</string>
+    <string name="titulo_elegir_estado">Choose status</string>
+    <string name="actualizar">Update</string>
+    <string name="eliminar">Delete</string>
+    <string name="titulo_confirmar_eliminar_evento">Confirm Deletion</string>
+    <string name="mensaje_confirmar_eliminar_evento">Are you sure you want to delete this event?</string>
+    <string name="evento_actualizado_exitosamente">Event updated.</string>
+    <string name="evento_eliminado_exitosamente">Event deleted.</string>
+
+    <string name="titulo_inicio">Upcoming Events</string>
+    <string name="eventos_hoy">Today\'s Events:</string>
+    <string name="eventos_proximos">Upcoming Events:</string>
+
+    <string name="respaldar_en_dropbox">Backup to Dropbox</string>
+    <string name="respaldar_en_google_drive">Backup to Google Drive</string>
+    <string name="restaurar_de_dropbox">Restore from Dropbox</string>
+    <string name="restaurar_de_google_drive">Restore from Google Drive</string>
+    <string name="respaldo_exitoso">Backup completed.</string>
+    <string name="respaldo_fallido">Backup failed.</string>
+    <string name="restauracion_exitosa">Restore completed.</string>
+    <string name="restauracion_fallida">Restore failed.</string>
+    <string name="seleccionar_servicio_respaldo">Select Backup Service</string>
+    <string name="seleccionar_servicio_restauracion">Select Restore Service</string>
+
+    <string name="titulo_acerca_de_app">About Task Organizer</string>
+    <string name="plantilla_version">Version %s</string>
+    <string name="desarrollado_por">Developed by: [Your Name/Team]</string>
+    <string name="texto_descripcion_app">This application helps you organize your tasks and events.</string>
+
+    <string name="aceptar">OK</string>
+    <string name="cancelar">Cancel</string>
+    <string name="si">Yes</string>
+    <string name="no">No</string>
+    <string name="error">Error</string>
+    <string name="cargando">Loading…</string>
+    <string name="permiso_requerido">Permission Required</string>
+    <string name="permiso_contactos_denegado">Contacts permission denied. Cannot select contact.</string>
+    <string name="permiso_ubicacion_denegado">Location permission denied. Cannot select location.</string>
+    <string name="permiso_notificaciones_denegado">Notification permission denied. Reminders cannot be shown.</string>
+    <string name="nombre_canal">Event Reminders</string>
+    <string name="descripcion_canal">Notifications for scheduled event reminders.</string>
+    <string name="titulo_recordatorio_evento">Event Reminder</string>
+
+    <string name="titulo_encabezado_nav">Organizer</string>
+    <string name="subtitulo_encabezado_nav">manage.your.events@email.com</string>
+    <string name="desc_encabezado_nav">Description text</string>
+    
+    <string name="todas_categorias">All</string>
+    
+    <!-- Additional strings -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="ic_notificacion">Notification</string>
+    <string name="colorPendiente">#FFA726</string>
+    <string name="colorRealizado">#66BB6A</string>
+    <string name="colorAplazado">#EF5350</string>
+
+    <!-- Strings for map and location -->
+    <string name="seleccionar_ubicacion">Select location</string>
+    <string name="mi_ubicacion">My location</string>
+    <string name="direccion_seleccionada">Selected address:</string>
+    <string name="seleccionar_esta_ubicacion">Select this location</string>
+    <string name="seleccionar_ubicacion_en_mapa">Please select a location on the map</string>
+    <string name="permiso_ubicacion_requerido">Location permission is required to show your current position</string>
+    <string name="ubicacion_seleccionada">Selected location</string>
+
+    <!-- Strings for editing events -->
+    <string name="editar_evento">Edit Event</string>
+    <string name="guardar_cambios">Save Changes</string>
+    <string name="eliminar_evento">Delete Event</string>
+    <string name="confirmar_eliminar_evento">Confirm deletion</string>
+    <string name="pregunta_confirmar_eliminar_evento">Are you sure you want to delete this event?</string>
+    <string name="error_actualizando_evento">Error updating event.</string>
+    <string name="error_eliminando_evento">Error deleting event.</string>
+    
+    <!-- Strings for reminders -->
+    <string name="opciones_recordatorio_sin">No reminder</string>
+    <string name="opciones_recordatorio_hora">At event time</string>
+    <string name="opciones_recordatorio_diez_min">10 minutes before</string>
+    <string name="opciones_recordatorio_dia">1 day before</string>
+</resources>

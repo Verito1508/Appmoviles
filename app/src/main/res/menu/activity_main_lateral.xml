@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_agregar_evento"
+            android:icon="@drawable/ic_agregar_evento"
+            android:title="@string/nav_agregar_evento" />
+        <item
+            android:id="@+id/nav_consultar_modificar_eventos"
+            android:icon="@drawable/ic_consultar"
+            android:title="@string/nav_consultar_modificar_eventos" />
+        <item
+            android:id="@+id/nav_respaldo"
+            android:icon="@drawable/ic_backup"
+            android:title="@string/nav_respaldo" />
+        <item
+            android:id="@+id/nav_restaurar"
+            android:icon="@drawable/ic_restaurar"
+            android:title="@string/nav_restaurar" />
+        <item
+            android:id="@+id/nav_acerca_de"
+            android:icon="@drawable/ic_acerca_de"
+            android:title="@string/nav_acerca_de" />
+        <item
+            android:id="@+id/nav_salir"
+            android:icon="@drawable/ic_restaurar"
+            android:title="@string/nav_salir" />
+    </group>
+</menu>

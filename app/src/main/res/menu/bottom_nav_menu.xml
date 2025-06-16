@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_inicio_inferior"
+        android:icon="@drawable/ic_inicio"
+        android:title="@string/bottom_nav_inicio" />
+    <item
+        android:id="@+id/nav_consultar_inferior"
+        android:icon="@drawable/ic_consultar"
+        android:title="@string/bottom_nav_consultar" />
+    <item
+        android:id="@+id/nav_salir_inferior"
+        android:icon="@drawable/ic_salir"
+        android:title="@string/nav_salir" />
+</menu>
